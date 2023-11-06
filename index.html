@@ -1,47 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/css/bootstrap.min.css">
-  <title>ANIMALS</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <title>Api Animal</title>
 </head>
+<body class="text-success bg-white">
+    
+    <main class="container">
 
-<body>
-  <nav class="navbar navbar-expand-lg bg-success">
-    <div class="container-fluid">
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <a class="nav-link active text-light" aria-current="page" href="index.html">Home</a>
-          <a class="nav-link text-light" href="inserir.html">Inserir</a>
+        <div class="row">
+            <div class="col-12 pt-5">
+                <h1>Cadastro de animais</h1>
+            </div>
         </div>
-      </div>
-    </div>
-  </nav>
-   
 
-  <main class="container">
-      <div class="row">
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>NOME</th>
-                    <th>ESPÉCIE</th>
-                    <th>COR</th>
-                    <th>TAMANHO</th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody id="listarAnimais"></tbody>
-        </table>
-    </div>
-  </main>
+        <div class="row pt-3">
+            <form action="" id="cadastraAnimal">
 
-<script src="/js/jquery-3.7.1.min.js"></script>
-<script src="js/delete.js"></script>
-<script src="js/list.js"></script>
+                <div class="mb-3">
+                    <label for="name" class="form-label"></label>
+                    <input type="text" id="name" placeholder="Nome do Animal:" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="species" class="form-label"></label>
+                    <input type="text" id="species" placeholder="Nome da Espécie:" class="form-control">
+                </div>
+
+                <div class="mb-3">
+                    <label for="color" class="form-label"></label>
+                    <input type="text" class="form-control" id="color" placeholder="Cor do Animal:">
+                </div>
+
+                <div class="mb-3">
+                    <label for="size" class="form-label"></label>
+                    <input type="text" class="form-control" id="size" placeholder="Tamanho do Animal:">
+                </div>
+
+                <button type="submit" class="btn btn-success">SALVAR</button>
+            </form>
+        </div>
+
+        <div class="row pt-5">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>NOME</th>
+                        <th>ESPÉCIE</th>
+                        <th>COR</th>
+                        <th>TAMANHO</th>
+                        <th></th>
+
+                    </tr>
+                </thead>
+                <tbody id="carregarAnimais">
+
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <script src="bootstrap.bundle.min.js"></script>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="list.js"></script>
+    <script src="insert.js"></script>
+    <script src="delete.js"></script>
+    <script src="edit.js"></script>
 </body>
-
 </html>
